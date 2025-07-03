@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>The Travelling Koala – Flashcards</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="The Travelling Koala Logo">
+    <img src="logo.png" alt="The Travelling Koala Logo" />
     <h1>Spanish Flashcards</h1>
     <select id="theme-selector"></select>
   </header>
@@ -19,12 +18,14 @@
         <div class="back"></div>
       </div>
     </div>
+
     <div class="controls">
       <button id="prev-btn">Previous</button>
       <button id="flip-btn">Flip</button>
       <button id="next-btn">Next</button>
     </div>
   </main>
+
   <script src="data.js"></script>
   <script>
     const selector = document.getElementById("theme-selector");
@@ -66,6 +67,7 @@
     };
 
     flipBtn.onclick = () => card.classList.toggle("flipped");
+    card.onclick = () => card.classList.toggle("flipped");
 
     Object.keys(flashcardData).forEach(theme => {
       const option = document.createElement("option");
