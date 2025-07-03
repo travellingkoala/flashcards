@@ -47,11 +47,16 @@
     }
 
     function renderCard() {
-      const pair = currentDeck[currentIndex];
-      front.textContent = pair[0];
-      back.textContent = pair[1];
-      card.classList.remove("flipped");
-    }
+  const pair = currentDeck[currentIndex];
+  front.textContent = pair[0];
+  back.textContent = pair[1];
+  card.classList.remove("flipped");
+
+  // ✅ Update progress tracker
+  const indicator = document.getElementById("progress-indicator");
+  indicator.textContent = `Card ${currentIndex + 1} of ${currentDeck.length}`;
+}
+
 
     nextBtn.onclick = () => {
       if (currentIndex < currentDeck.length - 1) {
