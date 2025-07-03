@@ -81,3 +81,8 @@ header img {
 .controls button:hover {
   background-color: #004d40;
 }
+#progress-indicator {
+  font-size: 1em;
+  color: #333;
+  margin: 0.5em 0;
+}
