@@ -72,3 +72,22 @@ header img {
 .controls button:hover {
   background-color: #004d40;
 }
+
+#card-container {
+  margin-bottom: 1.5em; /* add some space below the card */
+  position: relative;
+  z-index: 1; /* make sure card is above background but below controls */
+}
+
+.controls {
+  position: relative;
+  z-index: 10; /* bring controls above the card */
+}
+
+.card {
+  pointer-events: auto; /* ensure the card responds to clicks */
+}
+
+.controls button {
+  pointer-events: auto; /* ensure buttons get clicks */
+}
